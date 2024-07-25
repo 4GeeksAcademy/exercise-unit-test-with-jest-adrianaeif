@@ -16,7 +16,7 @@ test("One euro should be 1.07 dollars", function() {
 test ("Un dolar equivale a 146.2616 yen", function() {
   const yen = fromDollarToYen(1);
 
-  const expected = (1 / oneEuroIs.USD) * oneEuroIs.JPY;
+  const expected = (1 * oneEuroIs.JPY) / oneEuroIs.USD;
 
   expect(yen).toBe(expected);
 });
@@ -27,4 +27,4 @@ test ("Un Yen equivale a 0,0055 Pound", function () {
   const expected = (1 / oneEuroIs.JPY) * oneEuroIs.GBP;
 
   expect(pound).toBe(expected);
-})
+ })
